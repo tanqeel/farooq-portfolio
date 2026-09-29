@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" fill="none">
+    <rect width="300" height="100" rx="8" fill="rgba(255,255,255,0.02)"/>
+    <text x="150" y="52" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="700" fill="#f2f1ed" text-anchor="middle" letter-spacing="4">RUST LANG</text>
+    <text x="150" y="74" font-family="monospace" font-size="10" fill="rgba(242,241,237,0.4)" text-anchor="middle" letter-spacing="2">SYSTEMS PERFORMANCE</text>
+  </svg>

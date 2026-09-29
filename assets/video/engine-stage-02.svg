@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <linearGradient id="eg-02" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#050608" />
+        <stop offset="50%" stop-color="#090d14" />
+        <stop offset="100%" stop-color="#020304" />
+      </linearGradient>
+      <radialGradient id="eg-glow-02" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" stop-color="#bba2cf" stop-opacity="0.32" />
+        <stop offset="80%" stop-color="#050506" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#eg-02)" />
+    <rect width="1080" height="1920" fill="url(#eg-glow-02)" />
+
+    <!-- Grid Lines -->
+    <g stroke="rgba(242,241,237,0.05)" stroke-width="1">
+      <line x1="0" y1="0" x2="1080" y2="0" /><line x1="0" y1="110" x2="1080" y2="110" /><line x1="0" y1="220" x2="1080" y2="220" /><line x1="0" y1="330" x2="1080" y2="330" /><line x1="0" y1="440" x2="1080" y2="440" /><line x1="0" y1="550" x2="1080" y2="550" /><line x1="0" y1="660" x2="1080" y2="660" /><line x1="0" y1="770" x2="1080" y2="770" /><line x1="0" y1="880" x2="1080" y2="880" /><line x1="0" y1="990" x2="1080" y2="990" /><line x1="0" y1="1100" x2="1080" y2="1100" /><line x1="0" y1="1210" x2="1080" y2="1210" /><line x1="0" y1="1320" x2="1080" y2="1320" /><line x1="0" y1="1430" x2="1080" y2="1430" /><line x1="0" y1="1540" x2="1080" y2="1540" /><line x1="0" y1="1650" x2="1080" y2="1650" /><line x1="0" y1="1760" x2="1080" y2="1760" /><line x1="0" y1="1870" x2="1080" y2="1870" />
+      <line x1="0" y1="0" x2="0" y2="1920" /><line x1="110" y1="0" x2="110" y2="1920" /><line x1="220" y1="0" x2="220" y2="1920" /><line x1="330" y1="0" x2="330" y2="1920" /><line x1="440" y1="0" x2="440" y2="1920" /><line x1="550" y1="0" x2="550" y2="1920" /><line x1="660" y1="0" x2="660" y2="1920" /><line x1="770" y1="0" x2="770" y2="1920" /><line x1="880" y1="0" x2="880" y2="1920" /><line x1="990" y1="0" x2="990" y2="1920" />
+    </g>
+
+    <!-- Schematic Center Graphic -->
+    <g transform="translate(540, 880)">
+      <circle r="320" fill="none" stroke="#bba2cf" stroke-width="2" stroke-dasharray="6 8" opacity="0.6"/>
+      <circle r="220" fill="none" stroke="#f2f1ed" stroke-width="1.5" opacity="0.4"/>
+      <circle r="120" fill="rgba(11,14,20,0.8)" stroke="#bba2cf" stroke-width="3"/>
+      
+      <!-- Nodes in orbit -->
+      <circle cx="220" cy="0" r="14" fill="#070a0e" stroke="#bba2cf" stroke-width="2.5"/><circle cx="220" cy="0" r="5" fill="#f2f1ed"/><circle cx="110.00000000000003" cy="190.5255888325765" r="14" fill="#070a0e" stroke="#bba2cf" stroke-width="2.5"/><circle cx="110.00000000000003" cy="190.5255888325765" r="5" fill="#f2f1ed"/><circle cx="-109.99999999999996" cy="190.52558883257652" r="14" fill="#070a0e" stroke="#bba2cf" stroke-width="2.5"/><circle cx="-109.99999999999996" cy="190.52558883257652" r="5" fill="#f2f1ed"/><circle cx="-220" cy="2.694222958124177e-14" r="14" fill="#070a0e" stroke="#bba2cf" stroke-width="2.5"/><circle cx="-220" cy="2.694222958124177e-14" r="5" fill="#f2f1ed"/><circle cx="-110.0000000000001" cy="-190.52558883257646" r="14" fill="#070a0e" stroke="#bba2cf" stroke-width="2.5"/><circle cx="-110.0000000000001" cy="-190.52558883257646" r="5" fill="#f2f1ed"/><circle cx="110.00000000000003" cy="-190.5255888325765" r="14" fill="#070a0e" stroke="#bba2cf" stroke-width="2.5"/><circle cx="110.00000000000003" cy="-190.5255888325765" r="5" fill="#f2f1ed"/>
+
+      <text y="8" font-family="'Space Grotesk', sans-serif" font-size="28" font-weight="bold" fill="#f2f1ed" text-anchor="middle">NEURAL ROUTING</text>
+      <text y="42" font-family="monospace" font-size="14" fill="#bba2cf" text-anchor="middle" letter-spacing="2">STAGE 02 VERIFIED</text>
+    </g>
+
+    <!-- Top & Bottom Telemetry -->
+    <g font-family="monospace" fill="rgba(242,241,237,0.7)" font-size="16" letter-spacing="2">
+      <text x="80" y="140">FAROOQ ENGINE // SPECIFICATION</text>
+      <text x="80" y="190" font-family="'Space Grotesk', sans-serif" font-size="44" font-weight="bold" fill="#f2f1ed">Neural Routing</text>
+      <text x="80" y="240" font-size="18" fill="#bba2cf">Optimized tensor flows, RAG caches & vector indices</text>
+
+      <line x1="80" y1="280" x2="1000" y2="280" stroke="rgba(242,241,237,0.2)"/>
+
+      <text x="80" y="1740">TELEMETRY STACK: DISTRIBUTED REPLICATION</text>
+      <text x="80" y="1780">PIPELINE INTEGRITY: 100% SECURE</text>
+      <text x="80" y="1820" fill="#bba2cf">EXECUTION PROFILE: HIGH-CONCURRENCY</text>
+    </g>
+  </svg>
