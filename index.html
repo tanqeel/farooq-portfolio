@@ -13,10 +13,14 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Farooq // Systems Architecture">
   <meta property="og:title" content="Farooq — Principal Systems & AI Solutions Architect">
-  <meta property="og:description" content="Mission-critical platforms, high-throughput distributed systems, and real-time graphics. We engineer reality.">
+  <meta property="og:description" content="Mission-critical platforms, high-throughput distributed systems, and real-time 3D graphics. We engineer reality.">
+  <meta property="og:image" content="assets/matter/chapter-01.jpg">
   
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   
+  <!-- Three.js CDN for true 3D WebGL interactive experiences -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
   <link rel="stylesheet" href="matter.css">
   <link rel="stylesheet" href="edition.css">
   <link rel="stylesheet" href="portfolio-sites.css">
@@ -32,16 +36,16 @@
           d.classList.remove('intro-pending');
           d.classList.add('intro-complete', 'is-ready');
         }
-      }, 3800);
+      }, 3500);
     })()
   </script>
 </head>
 <body class="gmx-edition">
   <a class="skip-link" href="#conteudo">Skip to content</a>
 
-  <!-- Ambient WebGL Fluid Simulation -->
+  <!-- 3D WebGL Background Galaxy Canvas -->
   <div class="matter-field" aria-hidden="true">
-    <canvas class="matter-field__canvas" data-matter-canvas></canvas>
+    <canvas id="bg-3d-canvas" class="matter-field__canvas"></canvas>
     <i class="matter-field__fallback"></i>
   </div>
 
@@ -55,7 +59,7 @@
     </div>
     <div class="matter-intro__interface">
       <p class="matter-intro__system">
-        <span>FAROOQ // CORE ENGINE</span>
+        <span>FAROOQ // 3D CORE ENGINE</span>
         <span>PRIME INTELLIGENCE</span>
       </p>
       <div class="matter-intro__mark" aria-hidden="true">
@@ -90,7 +94,7 @@
       <a href="#estudio">Philosophy</a>
       <a href="#experiencias">Platforms</a>
       <span class="language-switch" role="group" aria-label="Specification mode">
-        <span>EN</span><i aria-hidden="true">/</i><a href="#engine">ARCH</a>
+        <span>EN</span><i aria-hidden="true">/</i><a href="#engine">3D-LIVE</a>
       </span>
       <button class="intro-replay" type="button" data-intro-replay aria-label="Replay Farooq opening">
         <span>Opening</span><i aria-hidden="true">↺</i>
@@ -102,22 +106,26 @@
   </header>
 
   <main id="conteudo" tabindex="-1">
-    <!-- 00. The Genesis Hero (Sticky Chapter Rail) -->
+    <!-- 00. The Genesis Hero (Sticky Chapter Rail + Interactive 3D Holographic Core) -->
     <section class="genesis" id="inicio" aria-labelledby="hero-title" data-genesis>
       <div class="genesis-sticky">
         <div class="genesis-media" aria-hidden="true">
           <figure class="genesis-frame is-active" data-genesis-frame="0">
-            <img src="assets/matter/chapter-01.svg" alt="Distributed Systems Architecture" width="1672" height="941" fetchpriority="high">
+            <img src="assets/matter/chapter-01.jpg" alt="Distributed Systems Architecture" width="1672" height="941" fetchpriority="high">
           </figure>
           <figure class="genesis-frame" data-genesis-frame="1">
-            <img src="assets/matter/chapter-02.svg" alt="Autonomous AI and Multi-Agent Swarms" width="1672" height="941">
+            <img src="assets/matter/chapter-02.jpg" alt="Autonomous AI and Multi-Agent Swarms" width="1672" height="941">
           </figure>
           <figure class="genesis-frame" data-genesis-frame="2">
-            <img src="assets/matter/chapter-03.svg" alt="Real-Time Spatial WebGL Engine" width="1672" height="941">
+            <img src="assets/matter/chapter-03.jpg" alt="Real-Time Spatial WebGL Engine" width="1672" height="941">
           </figure>
           <figure class="genesis-frame" data-genesis-frame="3">
-            <img src="assets/matter/chapter-04.svg" alt="Global Cloud Infrastructure" width="1672" height="941">
+            <img src="assets/matter/chapter-04.jpg" alt="Global Cloud Infrastructure" width="1672" height="941">
           </figure>
+
+          <!-- Interactive 3D Cybernetic Core Canvas in Hero -->
+          <canvas id="hero-3d-canvas" class="hero-3d-canvas"></canvas>
+
           <div class="genesis-light"></div>
           <div class="genesis-smoke genesis-smoke--back"></div>
           <div class="genesis-smoke genesis-smoke--front"></div>
@@ -168,7 +176,7 @@
       </div>
     </section>
 
-    <!-- 01. Selected Systems (Flagship Systems) -->
+    <!-- 01. Selected Systems (Flagship Systems with 3D Tilt Cards) -->
     <section class="selected-films" id="selecionados" aria-labelledby="selected-title">
       <div class="selected-head" data-reveal-observer>
         <div>
@@ -183,8 +191,8 @@
 
       <div class="motion-premieres" id="filmes-horizontais">
         <div class="motion-landscape-grid">
-          <button class="motion-card" type="button" data-video-title="AURA // Quantitative Liquidity Engine" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-            <img src="assets/matter/edition/p01-aura.svg" alt="AURA Engine Telemetry" width="1600" height="900" loading="lazy">
+          <button class="motion-card card-3d-tilt" type="button" data-video-title="AURA // Quantitative Liquidity Engine" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+            <img src="assets/matter/edition/p01-aura.jpg" alt="AURA Engine Telemetry" width="1600" height="900" loading="lazy">
             <span class="motion-shade"></span>
             <span class="motion-meta"><span>P01</span><span>0.48ms P99 · 2.4M QPS</span></span>
             <span class="motion-copy">
@@ -194,8 +202,8 @@
             </span>
           </button>
 
-          <button class="motion-card" type="button" data-video-title="NeuraMesh // Multi-Agent Swarm" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-            <img src="assets/matter/edition/p02-neura.svg" alt="NeuraMesh AI Topology" width="1600" height="900" loading="lazy">
+          <button class="motion-card card-3d-tilt" type="button" data-video-title="NeuraMesh // Multi-Agent Swarm" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+            <img src="assets/matter/edition/p02-neura.jpg" alt="NeuraMesh AI Topology" width="1600" height="900" loading="lazy">
             <span class="motion-shade"></span>
             <span class="motion-meta"><span>P02</span><span>1.2M Tokens/sec · 64 Nodes</span></span>
             <span class="motion-copy">
@@ -205,8 +213,8 @@
             </span>
           </button>
 
-          <button class="motion-card" type="button" data-video-title="Quantum Vault // Cryptographic Fabric" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-            <img src="assets/matter/edition/p03-quantum.svg" alt="Quantum Vault Enclave" width="1600" height="900" loading="lazy">
+          <button class="motion-card card-3d-tilt" type="button" data-video-title="Quantum Vault // Cryptographic Fabric" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+            <img src="assets/matter/edition/p03-quantum.jpg" alt="Quantum Vault Enclave" width="1600" height="900" loading="lazy">
             <span class="motion-shade"></span>
             <span class="motion-meta"><span>P03</span><span>Kyber-1024 · Zero-Trust</span></span>
             <span class="motion-copy">
@@ -216,8 +224,8 @@
             </span>
           </button>
 
-          <button class="motion-card" type="button" data-video-title="Chronos Stream // Global Observability" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-            <img src="assets/matter/edition/p04-chronos.svg" alt="Chronos Stream Metrics" width="1600" height="900" loading="lazy">
+          <button class="motion-card card-3d-tilt" type="button" data-video-title="Chronos Stream // Global Observability" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+            <img src="assets/matter/edition/p04-chronos.jpg" alt="Chronos Stream Metrics" width="1600" height="900" loading="lazy">
             <span class="motion-shade"></span>
             <span class="motion-meta"><span>P04</span><span>10M Events/sec · Sub-second</span></span>
             <span class="motion-copy">
@@ -261,34 +269,38 @@
       </div>
     </section>
 
-    <!-- 03. Farooq Engine (Comparison Scrubber) -->
+    <!-- 03. Farooq Engine (Interactive 3D WebGL Comparative Engine) -->
     <section class="production production--real" id="engine" data-production aria-labelledby="engine-title">
       <div class="production-sticky">
         <header class="production-head">
           <p class="section-kicker">03 / Farooq Engine</p>
-          <p>Distributed topology, tensor optimization, and real-time telemetry.</p>
+          <p>Interactive 3D topology, tensor optimization, and real-time telemetry.</p>
           <a href="#mundos">Skip to deployments <span aria-hidden="true">↘</span></a>
         </header>
         <div class="production-layout">
           <div class="production-copy">
             <h2 id="engine-title">From raw schema<br>to a <em>living platform.</em></h2>
-            <p class="production-lede">From base topological specifications to high-throughput production execution. Toggle across the three layers to observe latency curves, tensor caches, and telemetry.</p>
+            <p class="production-lede">From base topological specifications to high-throughput production execution. Toggle across the three layers to observe the interactive 3D model, latency curves, and tensor caches.</p>
             <div class="production-description" aria-live="off">
               <span data-production-number>01 / 03</span>
               <h3 data-production-title>The Base Topology</h3>
-              <p data-production-description>First-principles system design establishing microservice boundaries, gRPC contracts, and low-latency replication rings. Compare against neural routing.</p>
+              <p data-production-description>First-principles system design establishing microservice boundaries, gRPC contracts, and low-latency replication rings. Drag the 3D model to inspect in real time.</p>
             </div>
             <button class="text-link production-full" type="button" data-video-title="Farooq Engine Deep Dive" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
               Inspect complete engine simulation <span aria-hidden="true">↗</span>
             </button>
           </div>
-          <div class="production-viewport" data-production-viewport role="img" aria-label="Comparison of base topology, neural routing and 4K telemetry">
-            <img class="production-render" src="assets/video/engine-stage-01.svg" alt="Base Architecture Schematic" width="1080" height="1920" loading="lazy">
-            <img class="production-photo" src="assets/video/engine-stage-02.svg" alt="Neural Routing Tensor Flow" width="1080" height="1920" loading="lazy">
-            <img class="production-film-poster" src="assets/video/engine-stage-03.svg" alt="4K Production Telemetry" width="1080" height="1920" loading="lazy">
+          <div class="production-viewport" data-production-viewport role="img" aria-label="Interactive 3D Architecture Viewport">
+            <img class="production-render" src="assets/video/engine-stage-01.jpg" alt="Base Architecture Schematic" width="1080" height="1920" loading="lazy">
+            <img class="production-photo" src="assets/video/engine-stage-02.jpg" alt="Neural Routing Tensor Flow" width="1080" height="1920" loading="lazy">
+            <img class="production-film-poster" src="assets/video/engine-stage-03.jpg" alt="4K Production Telemetry" width="1080" height="1920" loading="lazy">
+            
+            <!-- Interactive 3D Engine Canvas Overlay -->
+            <canvas id="engine-3d-canvas" class="engine-3d-canvas"></canvas>
+
             <div class="production-caption">
-              <span>FAROOQ // CORE ENGINE</span>
-              <span data-production-material>System Core / Base Topology</span>
+              <span>FAROOQ // 3D INTERACTIVE ENGINE</span>
+              <span data-production-material>System Core / 3D Topology (Drag to rotate)</span>
             </div>
           </div>
         </div>
@@ -303,7 +315,7 @@
             <span>03</span><strong>4K Telemetry</strong><i aria-hidden="true"></i>
           </button>
         </nav>
-        <p class="production-note">Architecture comparison from Farooq's core portfolio. Interactive simulation preserves live stream timing; open telemetry for active probe inspection.</p>
+        <p class="production-note">Architecture comparison from Farooq's core portfolio. Drag inside the viewport to rotate the active 3D model in real time.</p>
       </div>
     </section>
 
@@ -317,7 +329,7 @@
 
       <article class="world" id="aura">
         <div class="world-media">
-          <img src="assets/matter/edition/world-aura.svg" alt="AURA Quantitative Trading Cockpit" width="2200" height="1468" loading="lazy">
+          <img src="assets/matter/edition/world-aura.jpg" alt="AURA Quantitative Trading Cockpit" width="2200" height="1468" loading="lazy">
           <div class="world-shade"></div>
         </div>
         <div class="world-copy">
@@ -339,7 +351,7 @@
 
       <article class="world" id="neura">
         <div class="world-media">
-          <img src="assets/matter/edition/world-neura.svg" alt="NeuraMesh Multi-Agent Consensus Swarm" width="2200" height="1468" loading="lazy">
+          <img src="assets/matter/edition/world-neura.jpg" alt="NeuraMesh Multi-Agent Consensus Swarm" width="2200" height="1468" loading="lazy">
           <div class="world-shade"></div>
         </div>
         <div class="world-copy">
@@ -361,7 +373,7 @@
 
       <article class="world" id="hyperion">
         <div class="world-media">
-          <img src="assets/matter/edition/world-hyperion.svg" alt="Hyperion Spatial 3D Digital Twin" width="2200" height="1468" loading="lazy">
+          <img src="assets/matter/edition/world-hyperion.jpg" alt="Hyperion Spatial 3D Digital Twin" width="2200" height="1468" loading="lazy">
           <div class="world-shade"></div>
         </div>
         <div class="world-copy">
@@ -391,7 +403,7 @@
       </div>
 
       <div class="film-compare" id="modelos-de-filme" role="group" aria-label="Farooq architecture deliverables">
-        <article class="film-model">
+        <article class="film-model card-3d-tilt">
           <div class="film-model-meta"><span>ARCHITECTURE / 01</span><span>CLOUD-NATIVE HIGH-SCALE</span></div>
           <h3>Distributed Core</h3>
           <p class="film-model-statement">Reliability, throughput, and zero downtime.</p>
@@ -403,7 +415,7 @@
           </ul>
         </article>
 
-        <article class="film-model film-model--ultra">
+        <article class="film-model film-model--ultra card-3d-tilt">
           <div class="film-model-meta"><span>ARCHITECTURE / 02</span><span>FAROOQ ENGINE · AI & AGENTS</span></div>
           <h3>Autonomous Intelligence</h3>
           <p class="film-model-statement">Dynamic multi-agent reasoning at scale.</p>
@@ -448,10 +460,10 @@
       </div>
 
       <div class="portfolio-sites-grid">
-        <article class="portfolio-site" id="nexo" data-reveal-observer>
+        <article class="portfolio-site card-3d-tilt" id="nexo" data-reveal-observer>
           <a class="portfolio-site__link" href="#aplicacao">
             <figure class="portfolio-site__cover">
-              <img src="assets/portfolio-sites/nexo-cover.svg" alt="NEXO Studios Trading Workspace" width="1448" height="1086" loading="lazy">
+              <img src="assets/portfolio-sites/nexo-cover.jpg" alt="NEXO Studios Trading Workspace" width="1448" height="1086" loading="lazy">
             </figure>
             <div class="portfolio-site__body">
               <p class="portfolio-site__eyebrow"><span>FinTech Platform</span><span aria-hidden="true">01</span></p>
@@ -462,10 +474,10 @@
           </a>
         </article>
 
-        <article class="portfolio-site" id="azimute" data-reveal-observer>
+        <article class="portfolio-site card-3d-tilt" id="azimute" data-reveal-observer>
           <a class="portfolio-site__link" href="#aplicacao">
             <figure class="portfolio-site__cover">
-              <img src="assets/portfolio-sites/azimute-cover.svg" alt="Azimute AI Vector Search" width="1448" height="1086" loading="lazy">
+              <img src="assets/portfolio-sites/azimute-cover.jpg" alt="Azimute AI Vector Search" width="1448" height="1086" loading="lazy">
             </figure>
             <div class="portfolio-site__body">
               <p class="portfolio-site__eyebrow"><span>AI Search Infrastructure</span><span aria-hidden="true">02</span></p>
@@ -476,10 +488,10 @@
           </a>
         </article>
 
-        <article class="portfolio-site" id="asl" data-reveal-observer>
+        <article class="portfolio-site card-3d-tilt" id="asl" data-reveal-observer>
           <a class="portfolio-site__link" href="#aplicacao">
             <figure class="portfolio-site__cover">
-              <img src="assets/portfolio-sites/asl-cover.svg" alt="ASL Cloud Zero-Trust Mesh" width="1448" height="1086" loading="lazy">
+              <img src="assets/portfolio-sites/asl-cover.jpg" alt="ASL Cloud Zero-Trust Mesh" width="1448" height="1086" loading="lazy">
             </figure>
             <div class="portfolio-site__body">
               <p class="portfolio-site__eyebrow"><span>Cloud Mesh</span><span aria-hidden="true">03</span></p>
@@ -490,10 +502,10 @@
           </a>
         </article>
 
-        <article class="portfolio-site" id="aquila" data-reveal-observer>
+        <article class="portfolio-site card-3d-tilt" id="aquila" data-reveal-observer>
           <a class="portfolio-site__link" href="#aplicacao">
             <figure class="portfolio-site__cover">
-              <img src="assets/portfolio-sites/aquila-cover.svg" alt="Aquila Spatial Graphics Engine" width="1448" height="1086" loading="lazy">
+              <img src="assets/portfolio-sites/aquila-cover.jpg" alt="Aquila Spatial Graphics Engine" width="1448" height="1086" loading="lazy">
             </figure>
             <div class="portfolio-site__body">
               <p class="portfolio-site__eyebrow"><span>WebGPU Engine</span><span aria-hidden="true">04</span></p>
@@ -504,10 +516,10 @@
           </a>
         </article>
 
-        <article class="portfolio-site" id="morada" data-reveal-observer>
+        <article class="portfolio-site card-3d-tilt" id="morada" data-reveal-observer>
           <a class="portfolio-site__link" href="#aplicacao">
             <figure class="portfolio-site__cover">
-              <img src="assets/portfolio-sites/morada-cover.svg" alt="Morada Cryptographic Identity Fabric" width="1448" height="1086" loading="lazy">
+              <img src="assets/portfolio-sites/morada-cover.jpg" alt="Morada Cryptographic Identity Fabric" width="1448" height="1086" loading="lazy">
             </figure>
             <div class="portfolio-site__body">
               <p class="portfolio-site__eyebrow"><span>Security Fabric</span><span aria-hidden="true">05</span></p>
@@ -552,8 +564,8 @@
       </div>
 
       <div id="portrait-rail" class="motion-portrait-rail" role="region" aria-label="Recent systems archive" tabindex="0">
-        <button class="motion-card motion-card--portrait" type="button" data-video-title="V01: Quantum Enclave" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/v01-quantum.svg" alt="Quantum Enclave" width="720" height="1280" loading="lazy">
+        <button class="motion-card motion-card--portrait card-3d-tilt" type="button" data-video-title="V01: Quantum Enclave" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/v01-quantum.jpg" alt="Quantum Enclave" width="720" height="1280" loading="lazy">
           <span class="motion-shade"></span>
           <span class="motion-meta"><span>V01</span><span>Kyber-1024</span></span>
           <span class="motion-copy">
@@ -563,8 +575,8 @@
           </span>
         </button>
 
-        <button class="motion-card motion-card--portrait" type="button" data-video-title="V02: Edge Neural Kernel" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/v02-edge.svg" alt="Edge Neural Kernel" width="720" height="1280" loading="lazy">
+        <button class="motion-card motion-card--portrait card-3d-tilt" type="button" data-video-title="V02: Edge Neural Kernel" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/v02-edge.jpg" alt="Edge Neural Kernel" width="720" height="1280" loading="lazy">
           <span class="motion-shade"></span>
           <span class="motion-meta"><span>V02</span><span>0.8ms P99</span></span>
           <span class="motion-copy">
@@ -574,8 +586,8 @@
           </span>
         </button>
 
-        <button class="motion-card motion-card--portrait" type="button" data-video-title="V03: Graph Engine X" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/v03-graph.svg" alt="Graph Engine X" width="720" height="1280" loading="lazy">
+        <button class="motion-card motion-card--portrait card-3d-tilt" type="button" data-video-title="V03: Graph Engine X" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/v03-graph.jpg" alt="Graph Engine X" width="720" height="1280" loading="lazy">
           <span class="motion-shade"></span>
           <span class="motion-meta"><span>V03</span><span>1.5B Edges</span></span>
           <span class="motion-copy">
@@ -585,8 +597,8 @@
           </span>
         </button>
 
-        <button class="motion-card motion-card--portrait" type="button" data-video-title="V04: Event Stream 4K" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/v04-stream.svg" alt="Event Stream 4K" width="720" height="1280" loading="lazy">
+        <button class="motion-card motion-card--portrait card-3d-tilt" type="button" data-video-title="V04: Event Stream 4K" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/v04-stream.jpg" alt="Event Stream 4K" width="720" height="1280" loading="lazy">
           <span class="motion-shade"></span>
           <span class="motion-meta"><span>V04</span><span>10M Msg/s</span></span>
           <span class="motion-copy">
@@ -596,8 +608,8 @@
           </span>
         </button>
 
-        <button class="motion-card motion-card--portrait" type="button" data-video-title="V05: Consensus Raft" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/v05-raft.svg" alt="Consensus Raft" width="720" height="1280" loading="lazy">
+        <button class="motion-card motion-card--portrait card-3d-tilt" type="button" data-video-title="V05: Consensus Raft" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/v05-raft.jpg" alt="Consensus Raft" width="720" height="1280" loading="lazy">
           <span class="motion-shade"></span>
           <span class="motion-meta"><span>V05</span><span>Byzantine Resilient</span></span>
           <span class="motion-copy">
@@ -607,8 +619,8 @@
           </span>
         </button>
 
-        <button class="motion-card motion-card--portrait" type="button" data-video-title="V06.A: Mesh Consensus" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/v06a-mesh.svg" alt="Mesh Consensus" width="720" height="1280" loading="lazy">
+        <button class="motion-card motion-card--portrait card-3d-tilt" type="button" data-video-title="V06.A: Mesh Consensus" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/v06a-mesh.jpg" alt="Mesh Consensus" width="720" height="1280" loading="lazy">
           <span class="motion-shade"></span>
           <span class="motion-meta"><span>V06.A</span><span>Agentic Mesh</span></span>
           <span class="motion-copy">
@@ -618,8 +630,8 @@
           </span>
         </button>
 
-        <button class="motion-card motion-card--portrait" type="button" data-video-title="V06.B: Kernel Shaper" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/v06b-kernel.svg" alt="Kernel Shaper" width="720" height="1280" loading="lazy">
+        <button class="motion-card motion-card--portrait card-3d-tilt" type="button" data-video-title="V06.B: Kernel Shaper" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/v06b-kernel.jpg" alt="Kernel Shaper" width="720" height="1280" loading="lazy">
           <span class="motion-shade"></span>
           <span class="motion-meta"><span>V06.B</span><span>eBPF Zero-Copy</span></span>
           <span class="motion-copy">
@@ -639,28 +651,28 @@
       </div>
 
       <div class="archive-grid archive-grid--legacy">
-        <button class="archive-card" type="button" data-video-title="A01: AST Compiler Engine" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/a01-compiler.svg" alt="AST Compiler Engine" width="720" height="1280" loading="lazy">
+        <button class="archive-card card-3d-tilt" type="button" data-video-title="A01: AST Compiler Engine" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/a01-compiler.jpg" alt="AST Compiler Engine" width="720" height="1280" loading="lazy">
           <span class="archive-shade"></span><span class="archive-index">A01</span>
           <span class="archive-copy"><small>COMPILER</small><strong>AST Engine</strong><em>Inspect ↗</em></span>
         </button>
-        <button class="archive-card" type="button" data-video-title="A02: Vector Memory Cache" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/a02-cache.svg" alt="Vector Memory Cache" width="720" height="1280" loading="lazy">
+        <button class="archive-card card-3d-tilt" type="button" data-video-title="A02: Vector Memory Cache" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/a02-cache.jpg" alt="Vector Memory Cache" width="720" height="1280" loading="lazy">
           <span class="archive-shade"></span><span class="archive-index">A02</span>
           <span class="archive-copy"><small>IN-MEMORY</small><strong>Vector Cache</strong><em>Inspect ↗</em></span>
         </button>
-        <button class="archive-card" type="button" data-video-title="A03: Continuous Flow Pipeline" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/a03-pipeline.svg" alt="Continuous Flow Pipeline" width="720" height="1280" loading="lazy">
+        <button class="archive-card card-3d-tilt" type="button" data-video-title="A03: Continuous Flow Pipeline" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/a03-pipeline.jpg" alt="Continuous Flow Pipeline" width="720" height="1280" loading="lazy">
           <span class="archive-shade"></span><span class="archive-index">A03</span>
           <span class="archive-copy"><small>PIPELINE</small><strong>Flow Engine</strong><em>Inspect ↗</em></span>
         </button>
-        <button class="archive-card" type="button" data-video-title="A04: Ray Traced Spatial Matrix" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/a04-spatial.svg" alt="Spatial Matrix" width="720" height="1280" loading="lazy">
+        <button class="archive-card card-3d-tilt" type="button" data-video-title="A04: Ray Traced Spatial Matrix" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/a04-spatial.jpg" alt="Spatial Matrix" width="720" height="1280" loading="lazy">
           <span class="archive-shade"></span><span class="archive-index">A04</span>
           <span class="archive-copy"><small>GRAPHICS</small><strong>Spatial Matrix</strong><em>Inspect ↗</em></span>
         </button>
-        <button class="archive-card" type="button" data-video-title="A05: Observability Collector" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
-          <img src="assets/video/a05-telemetry.svg" alt="Observability Collector" width="720" height="1280" loading="lazy">
+        <button class="archive-card card-3d-tilt" type="button" data-video-title="A05: Observability Collector" aria-haspopup="dialog" aria-controls="portfolio-film-dialog">
+          <img src="assets/video/a05-telemetry.jpg" alt="Observability Collector" width="720" height="1280" loading="lazy">
           <span class="archive-shade"></span><span class="archive-index">A05</span>
           <span class="archive-copy"><small>OBSERVABILITY</small><strong>Telemetry Pod</strong><em>Inspect ↗</em></span>
         </button>
@@ -889,7 +901,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="cinema-shader.js" defer></script>
+  <script src="three-scene.js" defer></script>
   <script src="hero-compositor.js" defer></script>
   <script src="production.js" defer></script>
   <script src="media-player.js" defer></script>

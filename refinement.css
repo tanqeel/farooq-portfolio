@@ -117,6 +117,48 @@
   }
 }
 
+/* 3D WebGL Canvases & Card Spotlight */
+.hero-3d-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.engine-3d-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  cursor: grab;
+}
+.engine-3d-canvas:active {
+  cursor: grabbing;
+}
+
+.card-3d-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.12s ease-out, border-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+.card-3d-tilt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(214, 169, 248, 0.3), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 10;
+}
+.card-3d-tilt:hover::before {
+  opacity: 1;
+}
+
 /* Luxury Awwwards-style Badge */
 #awwwards {
   position: fixed;
@@ -134,3 +176,4 @@
   border-radius: 4px 0 0 4px;
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
 }
+
